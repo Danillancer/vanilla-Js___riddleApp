@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
-</head>
-<body>
-  <div><h1>Hello!</h1></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="main__container riddle">
+        <div class="riddle__container">
+          <h1 class="riddle__title">Загадка</h1>
+          <p class="riddle__question" id="riddle__question"></p>
+          <p class="riddle__attempt">
+            Дается <span id="attempt"></span> попытки.
+          </p>
+          <input
+            type="text"
+            class="riddle__answer"
+            placeholder="ответ"
+            id="riddle__answer"
+            autofocus
+          />
+          <button onclick="check()" class="riddle__button">Проверить</button>
+        </div>
+      </div>
+      <div class="victory" id="victory">
+        <div class="victory__container">
+          <p>Вы угадали!</p>
+        </div>
+      </div>
+      <div class="loss" id="loss">
+        <div class="loss__container">
+          <p>
+            Закончились попытки.<br />
+            Попробуйте в следующий раз!
+          </p>
+        </div>
+      </div>
+      <div class="hint" id="hint-first">
+        <div class="hint__container">
+          <h2>Подсказка:</h2>
+          <p class="hint__text" id="hint-first_text"></p>
+        </div>
+      </div>
+      <div class="hint" id="hint-second">
+        <div class="hint__container">
+          <h2>Подсказка:</h2>
+          <p class="hint__text" id="hint-second_text">1</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
