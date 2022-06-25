@@ -11,7 +11,7 @@ window.onload = () => {
 
   check = () => {
     const input = document.getElementById("riddle__answer");
-    const guessedAnswer = input.value.toLowerCase();
+    const guessedAnswer = input.value.toLowerCase().trim();
     riddle.tries--;
     document.getElementById("attempt").innerText = riddle.tries;
 
