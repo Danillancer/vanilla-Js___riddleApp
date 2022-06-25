@@ -12,7 +12,7 @@ window.onload = () => {
   check = () => {
     const input = document.getElementById("riddle__answer");
     const guessedAnswer = input.value.toLowerCase();
-    riddle.tries = riddle.tries - 1;
+    riddle.tries--;
     document.getElementById("attempt").innerText = riddle.tries;
 
 
@@ -34,6 +34,9 @@ window.onload = () => {
       }
     } else {
       document.getElementById('loss').classList.toggle('active')
+      setTimeout(() => {
+         document.getElementById('loss').classList.toggle('active')
+       }, 2000)
       document.querySelector("button").setAttribute("disabled", "disabled");
     }
   };
