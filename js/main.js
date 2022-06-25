@@ -1,9 +1,8 @@
 const riddle = {
   question: "Висит груша нельзя скушать",
   correctAnswer: "лампочка",
-  hints: ["это съедобное", "это фрукт"],
+  hints: ["это не съедобное", "это не фрукт"],
   tries: 3,
-  checkAnswer() {},
 };
 
 window.onload = () => {
